@@ -16,6 +16,11 @@ body {
 header {
   background-color: #fff;
   border-bottom: 2px solid #ddd;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 #logo {
@@ -34,13 +39,12 @@ header {
   font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  width: 300px;
 }
 
 #customer_survice {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  padding: 10px 20px;
 }
 
 #customer_survice nav ul {
@@ -73,7 +77,7 @@ header {
 #topmenu nav ul li a {
   text-decoration: none;
   color: #333;
-  font-size: 14px;
+  font-size: 10px;
   padding: 5px 10px;
 }
 
@@ -108,6 +112,13 @@ header {
 }
 
 /* 랭킹 섹션 */
+
+#ganre_rank > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #ganre_rank {
   padding: 20px;
   background-color: #fff;
@@ -150,6 +161,13 @@ header {
 }
 
 /* PLAY 섹션 */
+
+#play > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #play {
   padding: 20px;
 }
@@ -183,6 +201,13 @@ header {
 }
 
 /* MD Pick 섹션 */
+
+#MD_pick > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #MD_pick {
   padding: 20px;
   background-color: #fff;
@@ -192,6 +217,9 @@ header {
   list-style: none;
   display: flex;
   gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #MD_pick img {
@@ -201,6 +229,13 @@ header {
 }
 
 /* 추천 키워드 */
+
+#keyword_recommend > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #keyword_recommend {
   padding: 20px;
 }
@@ -209,6 +244,9 @@ header {
   list-style: none;
   display: flex;
   gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #keyword_recommend img {
@@ -229,7 +267,7 @@ header {
   border-radius: 5px;
 }
 
-/* 푸터 */
+/* footer */
 footer {
   background-color: #333;
   padding: 20px;
