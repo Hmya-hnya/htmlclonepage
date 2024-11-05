@@ -1,0 +1,254 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* 헤더 스타일 */
+header {
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+#logo img {
+  width: 100px;
+  margin-right: 10px;
+}
+
+#logo input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#customer_survice {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+#customer_survice nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+#customer_survice nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+#topmenu {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+#topmenu nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+#topmenu nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+/* 메인 배너 */
+#main_banner {
+  width: 100%;
+  background-color: #e0e0e0;
+  padding: 40px;
+  text-align: center;
+}
+
+#main_banner img {
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  border-radius: 5px;
+}
+
+/* 서브 배너 */
+#sub_banner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+#sub_banner img {
+  width: calc(33.33% - 10px);
+  max-width: 200px;
+  border-radius: 5px;
+}
+
+/* 랭킹 섹션 */
+#ganre_rank {
+  padding: 20px;
+  background-color: #fff;
+}
+
+#ganre_rank nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+#ganre_rank nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 5px;
+}
+
+#ganre_rank button {
+  display: block;
+  margin: 15px auto;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* 티켓 오픈 */
+#ticket_open {
+  padding: 20px;
+  text-align: center;
+}
+
+#ticket_open img {
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* PLAY 섹션 */
+#play {
+  padding: 20px;
+}
+
+#play nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+#play nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  padding: 5px;
+}
+
+/* 할인 섹션 */
+#sale {
+  padding: 20px;
+  text-align: center;
+}
+
+#sale button {
+  padding: 10px 20px;
+  background-color: #ff5050;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* MD Pick 섹션 */
+#MD_pick {
+  padding: 20px;
+  background-color: #fff;
+}
+
+#MD_pick nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+#MD_pick img {
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* 추천 키워드 */
+#keyword_recommend {
+  padding: 20px;
+}
+
+#keyword_recommend nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+#keyword_recommend img {
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* 베스트 관람후기 */
+#best_review {
+  padding: 20px;
+  text-align: center;
+}
+
+#best_review img {
+  width: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+/* 푸터 */
+footer {
+  background-color: #333;
+  padding: 20px;
+  color: #fff;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
