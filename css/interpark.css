@@ -30,7 +30,7 @@ header {
 }
 
 #logo img {
-  width: 100px;
+  width: 200px;
   margin-right: 10px;
 }
 
@@ -84,8 +84,7 @@ header {
 /* 메인 배너 */
 #main_banner {
   width: 100%;
-  background-color: #e0e0e0;
-  padding: 40px;
+  background-color: rgb(142, 67, 231);
   text-align: center;
 }
 
@@ -101,7 +100,7 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
   padding: 20px;
 }
 
@@ -111,7 +110,7 @@ header {
   border-radius: 5px;
 }
 
-/* 랭킹 섹션 */
+/* 장르별 랭킹 */
 
 #ganre_rank > p {
   display: flex;
@@ -128,6 +127,8 @@ header {
   list-style: none;
   display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 #ganre_rank nav ul li a {
@@ -160,7 +161,16 @@ header {
   border-radius: 5px;
 }
 
-/* PLAY 섹션 */
+#ticket_open button {
+  padding: 10px 20px;
+  background-color: #ff5050;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* PLAY */
 
 #play > p {
   display: flex;
@@ -176,6 +186,8 @@ header {
   list-style: none;
   display: flex;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 #play nav ul li a {
@@ -185,7 +197,7 @@ header {
   padding: 5px;
 }
 
-/* 할인 섹션 */
+/* 할인 */
 #sale {
   padding: 20px;
   text-align: center;
@@ -200,7 +212,7 @@ header {
   cursor: pointer;
 }
 
-/* MD Pick 섹션 */
+/* MD Pick */
 
 #MD_pick > p {
   display: flex;
@@ -266,10 +278,20 @@ header {
   margin: 5px;
   border-radius: 5px;
 }
+/* 라스트 배너 */
+#last_banner {
+  display: flex;
+  justify-content: center;
+}
+
+#last_banner img {
+  width: 300px;
+  margin: 5px;
+}
 
 /* footer */
 footer {
-  background-color: #333;
+  background-color: #cccccc;
   padding: 20px;
   color: #fff;
 }
@@ -279,6 +301,15 @@ footer nav ul {
   display: flex;
   justify-content: center;
   gap: 15px;
+}
+
+footer nav ul li {
+  padding-right: 15px;
+  border-right: 1px solid #ddd;
+}
+
+footer nav ul li:last-child {
+  border: none;
 }
 
 footer nav ul li a {
