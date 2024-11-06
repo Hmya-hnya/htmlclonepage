@@ -16,11 +16,12 @@ body {
 header {
   background-color: #fff;
   border-bottom: 2px solid #ddd;
-  padding: 20px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  white-space: nowrap;
 }
 
 #logo {
@@ -45,6 +46,7 @@ header {
 #customer_survice {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 #customer_survice nav ul {
@@ -65,6 +67,7 @@ header {
   padding: 10px;
   text-align: center;
   width: 100%;
+  white-space: nowrap;
 }
 
 #topmenu nav ul {
@@ -97,16 +100,16 @@ header {
 
 /* 서브 배너 */
 #sub_banner {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding: 20px;
+  justify-content: center;
 }
 
 #sub_banner img {
-  width: calc(33.33% - 10px);
-  max-width: 200px;
+  width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 
@@ -121,6 +124,13 @@ header {
 #ganre_rank {
   padding: 20px;
   background-color: #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#ganre_rank image {
+  display: block;
+  margin: 0 auto;
 }
 
 #ganre_rank nav ul {
@@ -188,6 +198,7 @@ header {
   gap: 10px;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 #play nav ul li a {
@@ -197,6 +208,18 @@ header {
   padding: 5px;
 }
 
+#play > div {
+  display: flex;
+  justify-content: center; /* iframe들을 가운데 정렬 */
+  gap: 20px; /* iframe 사이의 간격 */
+}
+
+/* iframe 크기 조정 */
+#play iframe {
+  width: 360px; /* iframe의 고정 너비 */
+  height: 215px; /* iframe의 고정 높이 */
+  border: none; /* iframe의 테두리 제거 */
+}
 /* 할인 */
 #sale {
   padding: 20px;
@@ -223,6 +246,7 @@ header {
 #MD_pick {
   padding: 20px;
   background-color: #fff;
+  text-align: center;
 }
 
 #MD_pick nav ul {
@@ -232,12 +256,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 #MD_pick img {
   width: 150px;
   margin: 5px;
   border-radius: 5px;
+  justify-content: center;
 }
 
 /* 추천 키워드 */
@@ -250,6 +276,7 @@ header {
 
 #keyword_recommend {
   padding: 20px;
+  text-align: center;
 }
 
 #keyword_recommend nav ul {
@@ -259,12 +286,14 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
 }
 
 #keyword_recommend img {
   width: 150px;
   margin: 5px;
   border-radius: 5px;
+  justify-content: center;
 }
 
 /* 베스트 관람후기 */
@@ -276,6 +305,20 @@ header {
 #best_review img {
   width: 150px;
   margin: 5px;
+  border-radius: 5px;
+}
+
+#best_review .images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  justify-items: center;
+}
+
+#best_review .images img {
+  width: 150px;
+  height: auto;
   border-radius: 5px;
 }
 /* 라스트 배너 */
@@ -301,6 +344,7 @@ footer nav ul {
   display: flex;
   justify-content: center;
   gap: 15px;
+  white-space: nowrap;
 }
 
 footer nav ul li {
