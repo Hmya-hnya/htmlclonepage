@@ -13,7 +13,7 @@
         <a href="#">
           <img src="/image/logo/logo.png" />
         </a>
-        <label for="search">검색</label>
+        <label for="search"></label>
         <input
           type="text"
           name="search"
@@ -85,11 +85,43 @@
             <li><a href="#">레저/캠핑</a></li>
           </ul>
         </nav>
-        <img src="/image/ganrerank/ganrerank1.webp" />
-        <img src="/image/ganrerank/ganrerank2.webp" />
-        <img src="/image/ganrerank/ganrerank3.webp" />
-        <img src="/image/ganrerank/ganrerank4.webp" />
-        <img src="/image/ganrerank/ganrerank5.webp" />
+        <div class="ganre-images-container">
+          <div class="ganre_rank_img">
+            <img src="/image/ganrerank/ganrerank1.webp" />
+            <div id="caption">
+              <h2>지킬앤하이드</h2>
+              <p>블퀘 신카홀</p>
+            </div>
+          </div>
+          <div class="ganre_rank_img">
+            <img src="/image/ganrerank/ganrerank2.webp" />
+            <div id="caption">
+              <h2>카포네 밀크</h2>
+              <p>예사스테 1관</p>
+            </div>
+          </div>
+          <div class="ganre_rank_img">
+            <img src="/image/ganrerank/ganrerank3.webp" />
+            <div id="caption">
+              <h2>광화문 연가</h2>
+              <p>디아센</p>
+            </div>
+          </div>
+          <div class="ganre_rank_img">
+            <img src="/image/ganrerank/ganrerank4.webp" />
+            <div id="caption">
+              <h2>킹키부츠</h2>
+              <p>블퀘 신카홀</p>
+            </div>
+          </div>
+          <div class="ganre_rank_img">
+            <img src="/image/ganrerank/ganrerank5.webp" />
+            <div id="caption">
+              <h2>마타하리</h2>
+              <p>엘아센</p>
+            </div>
+          </div>
+        </div>
         <button>뮤지컬 랭킹 전체보기</button>
       </div>
       <!-- !!!!!!티켓 오픈!!!!!!!!!! -->
@@ -100,7 +132,6 @@
         <img src="/image/ticketopen/ticketopen3.webp" />
         <img src="/image/ticketopen/ticketopen4.webp" />
         <img src="/image/ticketopen/ticketopen5.webp" />
-        <img src="/image/ticketopen/ticketopen6.webp" />
         <br />
         <button>오픈 예정 공연 전체보기</button>
       </div>
@@ -125,20 +156,27 @@
             allowfullscreen
           ></iframe>
           <iframe
-            src="https://www.youtube.com/embed/videoid2"
+            src="https://www.youtube.com"
             title="추천영상2"
             allowfullscreen
           ></iframe>
           <iframe
-            src="https://www.youtube.com/embed/videoid3"
+            src="https://www.youtube.com"
             title="추천영상3"
             allowfullscreen
           ></iframe>
         </div>
       </div>
-      <!-- !!!!!!!!!할인!!!!!!!! -->
+      <!-- !!!!!!!!!할인!!!!!!!! 이미지 삽입 필요!!!!!!-->
       <div id="sale">
         <p>지금 할인중!</p>
+        <div class="saleimg">
+          <img src="/image/sale/sale1.webp" />
+          <img src="/image/sale/sale2.webp" />
+          <img src="/image/sale/sale3.webp" />
+          <img src="/image/sale/sale4.webp" />
+          <img src="/image/sale/sale5.webp" />
+        </div>
         <button>할인티켓 전체보기</button>
       </div>
       <!-- !!!!!MD Pick!!!!!!!! -->
@@ -179,10 +217,50 @@
       <div id="best_review">
         <p>베스트 관람후기</p>
         <div class="images">
-          <img src="/image/bestreview/bestreview1.webp" />
-          <img src="/image/bestreview/bestreview2.webp" />
-          <img src="/image/bestreview/bestreview3.webp" />
-          <img src="/image/bestreview/bestreview4.webp" />
+          <div class="review_item">
+            <img src="/image/bestreview/bestreview1.webp" />
+            <div class="review_content">
+              <h3>고도를 기다리며</h3>
+              <p>
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+              </p>
+            </div>
+          </div>
+          <div class="review_item">
+            <img src="/image/bestreview/bestreview2.webp" />
+            <div class="review_content">
+              <h3>포르테 피아니시모</h3>
+              <p>
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+              </p>
+            </div>
+          </div>
+          <div class="review_item">
+            <img src="/image/bestreview/bestreview3.webp" />
+            <div class="review_content">
+              <h3>리지</h3>
+              <p>
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+              </p>
+            </div>
+          </div>
+          <div class="review_item">
+            <img src="/image/bestreview/bestreview4.webp" />
+            <div class="review_content">
+              <h3>뭐야</h3>
+              <p>
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+                후기후기 후기후기 후기후기 후기후기 후기후기 후기후기 후기후기
+              </p>
+            </div>
+          </div>
         </div>
         <br />
         <button>관람후기 새로 보기</button>

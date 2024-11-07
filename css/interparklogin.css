@@ -1,0 +1,123 @@
+/* interparklogin.css */
+
+/* 기본 스타일 */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* 로고 섹션 */
+#logo {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+#logo img {
+  width: 150px;
+  height: auto;
+}
+
+/* 입력 섹션 */
+#input {
+  background-color: #ffffff;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#input label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#input input[type="text"] {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#input input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+#input span {
+  font-size: 14px;
+  color: #333;
+}
+
+#input button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* 네비게이션 */
+nav {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#login {
+  list-style: none;
+  padding: 0;
+}
+
+#login li {
+  display: inline;
+  margin: 0 5px;
+}
+
+#login a {
+  text-decoration: none;
+  font-size: 14px;
+  border-right: 1px solid #ddd;
+  padding-right: 15px;
+}
+
+#login :nth-child(3) a {
+  color: #0073e6;
+}
+
+#login a:hover {
+  text-decoration: underline;
+}
+
+/* SNS 이미지 섹션 */
+#SNS {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+#SNS img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border-color: white;
+  padding: 12px;
+}
+
+/* 하단 텍스트 */
+p {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  margin-top: 100px;
+  text-decoration: underline;
+  cursor: pointer;
+}
