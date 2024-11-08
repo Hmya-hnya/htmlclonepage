@@ -27,11 +27,42 @@ header {
   display: flex;
   align-items: center;
   padding: 20px;
+  position: relative;
 }
 
 #logo img {
   width: 200px;
   margin-right: 10px;
+  cursor: pointer;
+}
+
+#logo .menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+  z-index: 10;
+  margin-top: -30px;
+}
+
+#logo:hover .menu {
+  display: block;
+}
+
+#logo .menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  display: block;
+}
+
+#logo .menu a:hover {
+  background-color: #f0f0f0;
 }
 
 #logo input[type="text"] {
@@ -102,7 +133,7 @@ header {
 /* 메인 배너 */
 #main_banner {
   width: 100%;
-  background-color: rgb(142, 67, 231);
+  background-color: #d8d8d8;
   text-align: center;
 }
 
@@ -116,7 +147,7 @@ header {
 /* 서브 배너 */
 #sub_banner {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 400px);
   gap: 10px;
   padding: 20px;
   justify-content: center;
@@ -124,6 +155,7 @@ header {
 
 #sub_banner img {
   width: 100%;
+  max-width: 400px;
   height: auto;
   border-radius: 5px;
 }
@@ -159,7 +191,7 @@ header {
 
 .ganre_rank_img img {
   width: 100%;
-  border-radius: 8px; /* 둥근 모서리 효과 (원하는 경우) */
+  border-radius: 8px;
 }
 
 #ganre_rank nav ul {
@@ -217,6 +249,41 @@ header {
   border: 1px solid rgb(200, 200, 200);
   border-radius: 20px;
   cursor: pointer;
+  margin-top: 20px;
+}
+
+#ticket_open .image-container {
+  display: flex;
+  flex-wrap: nowrap; /* 줄바꿈을 방지 */
+  gap: 5px;
+  width: 100%;
+  justify-content: center; /* 이미지들을 가운데로 정렬 */
+  align-items: center;
+}
+
+#ticket_open p {
+  margin-bottom: 20px;
+}
+
+#ticket_open .img_item {
+  position: relative;
+}
+
+#ticket_open .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#ticket_open .img_item:hover .description {
+  opacity: 1;
 }
 
 /* PLAY */
@@ -273,6 +340,8 @@ header {
 #sale {
   padding: 20px;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 #sale button {
@@ -282,6 +351,42 @@ header {
   border: 1px solid rgb(200, 200, 200);
   border-radius: 20px;
   cursor: pointer;
+}
+
+#sale img {
+  width: 200px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#sale .sale-img {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#sale .img_item {
+  position: relative;
+}
+
+#sale .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#sale .img_item:hover .description {
+  opacity: 1;
 }
 
 /* MD Pick */
@@ -334,6 +439,36 @@ header {
   justify-content: center;
 }
 
+#MD_pick .MDPick-img {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#MD_pick .img_item {
+  position: relative;
+}
+
+#MD_pick .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#MD_pick .img_item:hover .description {
+  opacity: 1;
+}
+
 /* 추천 키워드 */
 
 #keyword_recommend > p {
@@ -383,12 +518,57 @@ header {
   justify-content: center;
 }
 
+#keyword_recommend .recomment-img {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#keyword_recommend .img_item {
+  position: relative;
+}
+
+#keyword_recommend .description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#keyword_recommend .img_item:hover .description {
+  opacity: 1;
+}
+
+/* 중간 이미지 */
+.middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(103, 66, 216);
+}
+
+.middle img {
+  width: 60%;
+  max-width: 600px;
+  height: auto;
+}
 /* 베스트 관람후기 */
 #best_review {
   padding: 20px;
   text-align: center;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 #best_review .images {
@@ -445,6 +625,7 @@ header {
   border-radius: 20px;
   cursor: pointer;
 }
+
 /* 라스트 배너 */
 #last_banner {
   display: flex;
@@ -488,4 +669,92 @@ footer nav ul li a {
 
 footer nav ul li a:hover {
   text-decoration: underline;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!미디어 활용 */
+
+/* 메인배너 */
+@media (max-width: 1000px) {
+  #main_banner img {
+    content: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile1.webp");
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+/* 티켓 오픈 */
+@media (max-width: 1000px) {
+  #ticket_open .image-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/* 할인 */
+@media (max-width: 1000px) {
+  #sale .sale-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/* MD Pick */
+@media (max-width: 1000px) {
+  #MD_pick .MDPick-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/* 추천 키워드 */
+@media (max-width: 1000px) {
+  #keyword_recommend .recomment-img {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+/* 서브 배너 */
+@media (max-width: 1000px) {
+  #sub_banner {
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열로 배열 */
+  }
+
+  /* 마지막 이미지를 숨깁니다 */
+  #sub_banner img:nth-last-child(1) {
+    display: none;
+  }
+}
+
+/* 베스트 리뷰 */
+@media (max-width: 1000px) {
+  #best_review .images {
+    display: grid;
+    grid-template-columns: 1fr; /* 각 항목을 한 줄에 */
+    grid-template-rows: repeat(4, auto); /* 1x4 형식으로 배치 */
+  }
+
+  #best_review .review_item {
+    flex-direction: row; /* 이미지-후기를 가로로 정렬 */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #best_review .review_item img {
+    width: 200px; /* 작은 화면에서 이미지 크기 조정 */
+  }
+
+  #best_review .review_content {
+    width: auto; /* 내용을 이미지 옆에 맞추기 */
+    text-align: left;
+  }
 }

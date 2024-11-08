@@ -95,7 +95,7 @@ nav {
   text-decoration: underline;
 }
 
-/* SNS 이미지 섹션 */
+/* SNS 이미지 */
 #SNS {
   display: flex;
   justify-content: center;
@@ -104,8 +104,8 @@ nav {
 }
 
 #SNS img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   border-color: white;

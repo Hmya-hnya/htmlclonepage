@@ -13,6 +13,11 @@
         <a href="#">
           <img src="/image/logo/logo.png" />
         </a>
+        <div class="menu">
+          <a href="#">메뉴1</a>
+          <a href="#">메뉴2</a>
+          <a href="#">메뉴3</a>
+        </div>
         <label for="search"></label>
         <input
           type="text"
@@ -29,7 +34,7 @@
             <li><a href="#">마이페이지</a></li>
           </ul>
         </nav>
-        <img src="/image/" />
+        <img src="/image/img_korean.svg" />
       </div>
     </header>
     <!-- !!!!!!탑메뉴 -->
@@ -57,8 +62,12 @@
     <main>
       <!-- !!!!!!!메인 배너 -->
       <div id="main_banner">
-        <img src="/image/mainbanner/mainbanner1.jpg" />
+        <img
+          src="/image/mainbanner/mainbanner1.jpg"
+          class="main-banner-image"
+        />
       </div>
+      <!-- !!!!!!!!서브 배너!!!! -->
       <div id="sub_banner">
         <img src="/image/subbanner/subbanner1.webp" />
         <img src="/image/subbanner/subbanner2.webp" />
@@ -127,11 +136,34 @@
       <!-- !!!!!!티켓 오픈!!!!!!!!!! -->
       <div id="ticket_open">
         <p>티켓 오픈</p>
-        <img src="/image/ticketopen/ticketopen1.webp" />
-        <img src="/image/ticketopen/ticketopen2.webp" />
-        <img src="/image/ticketopen/ticketopen3.webp" />
-        <img src="/image/ticketopen/ticketopen4.webp" />
-        <img src="/image/ticketopen/ticketopen5.webp" />
+        <div class="image-container">
+          <div class="img_item">
+            <img src="/image/ticketopen/ticketopen1.webp" />
+            <div class="description">
+              설명이 길어졌을 때 테스트테스트 줄바꿈도 테스트
+            </div>
+          </div>
+          <div class="img_item">
+            <img src="/image/ticketopen/ticketopen2.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/ticketopen/ticketopen3.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/ticketopen/ticketopen4.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/ticketopen/ticketopen5.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/ticketopen/ticketopen6.webp" />
+            <div class="description">설명설명</div>
+          </div>
+        </div>
         <br />
         <button>오픈 예정 공연 전체보기</button>
       </div>
@@ -170,12 +202,31 @@
       <!-- !!!!!!!!!할인!!!!!!!! 이미지 삽입 필요!!!!!!-->
       <div id="sale">
         <p>지금 할인중!</p>
-        <div class="saleimg">
-          <img src="/image/sale/sale1.webp" />
-          <img src="/image/sale/sale2.webp" />
-          <img src="/image/sale/sale3.webp" />
-          <img src="/image/sale/sale4.webp" />
-          <img src="/image/sale/sale5.webp" />
+        <div class="sale-img">
+          <div class="img_item">
+            <img src="/image/sale/sale1.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/sale/sale2.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/sale/sale3.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/sale/sale4.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/sale/sale5.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/sale/sale6.webp" />
+            <div class="description">설명설명</div>
+          </div>
         </div>
         <button>할인티켓 전체보기</button>
       </div>
@@ -191,11 +242,32 @@
             <li><a href="#">해외 공연</a></li>
           </ul>
         </nav>
-        <img src="/image/MDPick/MDPick1.webp" />
-        <img src="/image/MDPick/MDPick2.webp" />
-        <img src="/image/MDPick/MDPick3.webp" />
-        <img src="/image/MDPick/MDPick4.webp" />
-        <img src="/image/MDPick/MDPick5.webp" />
+        <div class="MDPick-img">
+          <div class="img_item">
+            <img src="/image/MDPick/MDPick1.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/MDPick/MDPick2.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/MDPick/MDPick3.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/MDPick/MDPick4.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/MDPick/MDPick5.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/MDPick/MDPick6.webp" />
+            <div class="description">설명설명</div>
+          </div>
+        </div>
       </div>
       <!-- !!!!!!!!!!추천 키워드!!!!!!!! -->
       <div id="keyword_recommend">
@@ -207,11 +279,37 @@
             <li><a href="#">대학로 연극 추천</a></li>
           </ul>
         </nav>
-        <img src="/image/keywordrecommend/keywordrecommend1.webp" />
-        <img src="/image/keywordrecommend/keywordrecommend2.webp" />
-        <img src="/image/keywordrecommend/keywordrecommend3.webp" />
-        <img src="/image/keywordrecommend/keywordrecommend4.webp" />
-        <img src="/image/keywordrecommend/keywordrecommend5.webp" />
+        <div class="recomment-img">
+          <div class="img_item">
+            <img src="/image/keywordrecommend/keywordrecommend1.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/keywordrecommend/keywordrecommend2.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/keywordrecommend/keywordrecommend3.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/keywordrecommend/keywordrecommend4.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/keywordrecommend/keywordrecommend5.webp" />
+            <div class="description">설명설명</div>
+          </div>
+          <div class="img_item">
+            <img src="/image/keywordrecommend/keywordrecommend6.webp" />
+            <div class="description">설명설명</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 중간 이미지!!! -->
+      <div class="middle">
+        <img src="/image/중간 이미지.svg" alt="" />
       </div>
       <!-- !!!!!!관람 후기!!!!!!!!! -->
       <div id="best_review">
