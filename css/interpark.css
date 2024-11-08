@@ -394,6 +394,14 @@ header {
   height: 215px; /* iframe의 고정 높이 */
   border: none; /* iframe의 테두리 제거 */
 }
+
+.video {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: -5px;
+  margin: 5px;
+}
+
 /* 할인 */
 #sale {
   padding: 20px;
@@ -777,11 +785,12 @@ footer nav ul li a:hover {
   #main_banner {
     background-size: cover;
     background-position: center;
-    max-width: 600px;
+    max-width: 650px;
     height: 700px;
     border-radius: 10px;
     margin: auto;
     animation: changeMobileBackground 24s infinite;
+    margin-top: 20px;
   }
 }
 /* 메인배너 애니메이션 */
@@ -820,8 +829,8 @@ footer nav ul li a:hover {
 }
 
 /* PLAY */
-@media (max-width: 800px) {
-  #play iframe:nth-child(3) {
+@media (max-width: 1000px) {
+  #play .video:nth-child(3) {
     display: none; /*화면이 작아지면 영상 하나 삭제*/
   }
 }
