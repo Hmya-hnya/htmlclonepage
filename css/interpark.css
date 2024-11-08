@@ -29,7 +29,7 @@ header {
 #logo {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   position: relative;
 }
 
@@ -42,13 +42,15 @@ header {
 #logo .menu {
   display: none;
   position: absolute;
+  background-color: white;
   top: 100%;
   left: 30px;
-  padding: 10px;
+  padding: px;
   border-radius: 5px;
   width: 150px;
   z-index: 10;
   margin-top: -30px;
+  border-color: #acacac;
 }
 
 #logo:hover .menu {
@@ -67,11 +69,11 @@ header {
 }
 
 #logo input[type="text"] {
-  padding: 8px;
+  padding: 10px;
   font-size: 14px;
   border: 1px solid #ddd;
   border-radius: 30px;
-  width: 300px;
+  width: 500px;
 }
 
 /* 고객 서비스 들어가기(로그인/회원가입 등) */
@@ -99,13 +101,12 @@ header {
 /*탑메뉴*/
 #topmenu {
   background-color: #f8f8f8;
-  border-top: 1px solid #ddd;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   width: 100%;
   white-space: nowrap;
   position: sticky; /* 스크롤 시 고정 */
-  top: 60px; /* header 높이에 맞게 위치 설정 */
+  top: 30px; /* header 높이에 맞게 위치 설정 */
   z-index: 999; /* header보다 아래로 설정 */
 }
 
@@ -266,6 +267,22 @@ header {
   border: 1px solid rgb(200, 200, 200);
   border-radius: 20px;
   cursor: pointer;
+}
+
+.rank-number {
+  position: absolute;
+  bottom: 60px; /* 아래로 10px */
+  left: 10px; /* 왼쪽으로 10px */
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(255, 255, 255); /* 숫자 색상 */
+  padding: 5px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.ganre_rank_img {
+  position: relative;
 }
 
 /* 티켓 오픈 */
@@ -633,7 +650,7 @@ header {
 
 #best_review .review_item {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: flex-start;
   gap: 10px;
 }
@@ -658,7 +675,7 @@ header {
 }
 
 #best_review .review_content p {
-  font-size: 16px;
+  font-size: 14px;
   margin: 0;
   white-space: pre-line;
 }
@@ -685,11 +702,15 @@ header {
 
 /* footer */
 footer {
-  background-color: #cccccc;
-  padding: 20px;
+  background-color: #eeeeee;
+  padding: 3px;
   color: #fff;
 }
-
+#bottom_menu {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
 footer nav ul {
   list-style: none;
   display: flex;
@@ -700,7 +721,7 @@ footer nav ul {
 
 footer nav ul li {
   padding-right: 15px;
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #acacac;
 }
 
 footer nav ul li:last-child {
@@ -709,14 +730,47 @@ footer nav ul li:last-child {
 
 footer nav ul li a {
   text-decoration: none;
-  color: #fff;
+  color: #000000;
   font-size: 12px;
 }
 
 footer nav ul li a:hover {
   text-decoration: underline;
 }
+
+#footer_sections {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.footer-section p {
+  font-size: 12px;
+  color: #000000;
+}
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!미디어쿼리 */
+
+@media (max-width: 1000px) {
+  /* #logo는 기본적으로 유지 */
+  #customer_survice {
+    display: none; /* 작은 화면에서 고객 서비스 메뉴 숨기기 */
+  }
+
+  #topmenu {
+    display: none; /* 작은 화면에서 탑 메뉴 숨기기 */
+  }
+}
 
 /* 메인배너 */
 @media (max-width: 1000px) {
@@ -759,9 +813,16 @@ footer nav ul li a:hover {
 @media (max-width: 1000px) {
   #ticket_open .image-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
+  }
+}
+
+/* PLAY */
+@media (max-width: 800px) {
+  #play iframe:nth-child(3) {
+    display: none; /*화면이 작아지면 영상 하나 삭제*/
   }
 }
 
@@ -769,7 +830,7 @@ footer nav ul li a:hover {
 @media (max-width: 1000px) {
   #sale .sale-img {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
   }
@@ -779,7 +840,7 @@ footer nav ul li a:hover {
 @media (max-width: 1000px) {
   #MD_pick .MDPick-img {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
   }
@@ -789,7 +850,7 @@ footer nav ul li a:hover {
 @media (max-width: 1000px) {
   #keyword_recommend .recomment-img {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 배열 */
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     justify-items: center;
     align-items: center;
@@ -799,7 +860,7 @@ footer nav ul li a:hover {
 /* 서브 배너 */
 @media (max-width: 1000px) {
   #sub_banner {
-    grid-template-columns: repeat(2, 1fr); /* 2개의 열로 배열 */
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
   }
@@ -814,23 +875,23 @@ footer nav ul li a:hover {
 @media (max-width: 1000px) {
   #best_review .images {
     display: grid;
-    grid-template-columns: 1fr; /* 각 항목을 한 줄에 */
-    grid-template-rows: repeat(4, auto); /* 1x4 형식으로 배치 */
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
   }
 
   #best_review .review_item {
-    flex-direction: row; /* 이미지-후기를 가로로 정렬 */
+    flex-direction: row;
     align-items: center;
     gap: 10px;
     width: 100%;
   }
 
   #best_review .review_item img {
-    width: 200px; /* 작은 화면에서 이미지 크기 조정 */
+    width: 200px;
   }
 
   #best_review .review_content {
-    width: auto; /* 내용을 이미지 옆에 맞추기 */
+    width: auto;
     text-align: left;
   }
 }
