@@ -8,21 +8,24 @@
 body {
   line-height: 1.6;
   color: #333;
-  background-color: #f9f9f9;
 }
 
 /* 헤더 스타일 */
 header {
-  background-color: #fff;
   border-bottom: 2px solid #ddd;
+  background-color: white;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   white-space: nowrap;
+  position: sticky; /*스크롤을 내려도 헤더 고정*/
+  top: 0;
+  z-index: 1000;
 }
 
+/* 로고 및 검색창 */
 #logo {
   display: flex;
   align-items: center;
@@ -41,8 +44,6 @@ header {
   position: absolute;
   top: 100%;
   left: 30px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 10px;
   border-radius: 5px;
   width: 150px;
@@ -73,6 +74,8 @@ header {
   width: 300px;
 }
 
+/* 고객 서비스 들어가기(로그인/회원가입 등) */
+
 #customer_survice {
   display: flex;
   align-items: center;
@@ -93,7 +96,7 @@ header {
   color: #333;
   font-size: 14px;
 }
-
+/*탑메뉴*/
 #topmenu {
   background-color: #f8f8f8;
   border-top: 1px solid #ddd;
@@ -101,6 +104,9 @@ header {
   text-align: center;
   width: 100%;
   white-space: nowrap;
+  position: sticky; /* 스크롤 시 고정 */
+  top: 60px; /* header 높이에 맞게 위치 설정 */
+  z-index: 999; /* header보다 아래로 설정 */
 }
 
 #topmenu nav ul {
@@ -133,8 +139,42 @@ header {
 /* 메인 배너 */
 #main_banner {
   width: 100%;
-  background-color: #d8d8d8;
-  text-align: center;
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  animation: changeBackground 24s infinite;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+#main_banner img {
+  display: none;
+}
+/*메인배너 애니메이션*/
+
+@keyframes changeBackground {
+  0% {
+    background-image: url("/image/mainbanner/mainbanner1.jpg");
+  }
+  16% {
+    background-image: url("/image/mainbanner/mainbanner2.jpg");
+  }
+  33% {
+    background-image: url("/image/mainbanner/mainbanner3.jpg");
+  }
+  50% {
+    background-image: url("/image/mainbanner/mainbanner4.jpg");
+  }
+  66% {
+    background-image: url("/image/mainbanner/mainbanner5.jpg");
+  }
+  83% {
+    background-image: url("/image/mainbanner/mainbanner6.jpg");
+  }
+  100% {
+    background-image: url("/image/mainbanner/mainbanner1.jpg");
+  }
 }
 
 #main_banner img {
@@ -315,6 +355,7 @@ header {
   font-size: 14px;
   padding: 5px;
   border: 0.1px solid rgb(207, 182, 238);
+  background-color: white;
   border-radius: 15px;
 }
 
@@ -503,6 +544,7 @@ header {
   padding: 5px;
   border: 0.1px solid rgb(207, 182, 238);
   border-radius: 15px;
+  background-color: white;
 }
 
 #keyword_recommend nav ul li a:hover {
@@ -554,11 +596,15 @@ header {
   justify-content: center;
   align-items: center;
   background-color: rgb(103, 66, 216);
+  width: 100%;
+  max-width: 1500px;
+  border-radius: 10px;
+  margin: auto;
 }
 
 .middle img {
-  width: 60%;
-  max-width: 600px;
+  width: 50%;
+  max-width: 400px;
   height: auto;
 }
 /* 베스트 관람후기 */
@@ -670,14 +716,42 @@ footer nav ul li a {
 footer nav ul li a:hover {
   text-decoration: underline;
 }
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!미디어 활용 */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!미디어쿼리 */
 
 /* 메인배너 */
 @media (max-width: 1000px) {
-  #main_banner img {
-    content: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile1.webp");
-    max-width: 80%;
-    height: auto;
+  #main_banner {
+    background-size: cover;
+    background-position: center;
+    max-width: 600px;
+    height: 700px;
+    border-radius: 10px;
+    margin: auto;
+    animation: changeMobileBackground 24s infinite;
+  }
+}
+/* 메인배너 애니메이션 */
+@keyframes changeMobileBackground {
+  0% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile1.webp");
+  }
+  16% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile2.webp");
+  }
+  33% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile3.webp");
+  }
+  50% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile4.webp");
+  }
+  66% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile5.webp");
+  }
+  83% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile6.webp");
+  }
+  100% {
+    background-image: url("/image/mainbanner/mainbanner_mobile/mainbanner-mobile1.webp");
   }
 }
 
@@ -726,6 +800,8 @@ footer nav ul li a:hover {
 @media (max-width: 1000px) {
   #sub_banner {
     grid-template-columns: repeat(2, 1fr); /* 2개의 열로 배열 */
+    justify-items: center;
+    align-items: center;
   }
 
   /* 마지막 이미지를 숨깁니다 */

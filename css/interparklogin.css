@@ -95,6 +95,11 @@ nav {
   text-decoration: underline;
 }
 
+#login li:nth-child(1) a:visited,
+#login li:nth-child(2) a:visited {
+  color: #333; /* 방문 후에도 색상 유지 */
+}
+
 /* SNS 이미지 */
 #SNS {
   display: flex;
@@ -104,9 +109,8 @@ nav {
 }
 
 #SNS img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border-color: white;
   padding: 12px;
